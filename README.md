@@ -5,6 +5,7 @@ A collection of test cases for zk and Markdown files and directory structures.
 
 ## Structure
 
+```bash
 .
 ├── assets/        # Images, etc.
 ├── daily/         # Daily notes
@@ -21,7 +22,7 @@ A collection of test cases for zk and Markdown files and directory structures.
     ├── tag/       # Tests for tags
     ├── title/     # Tests for title
     └── yaml/      # Tests for YAML frontmatter
-
+```
 
 ## Related
 

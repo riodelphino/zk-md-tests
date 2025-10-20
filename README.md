@@ -14,6 +14,7 @@ A collection of test cases for zk and Markdown files and directory structures.
     ├── filetype/  # Tests for filetypes
     ├── filter/    # Tests for filtering
     ├── git/       # Tests for git
+    ├── hidden/    # Tests for hidden items
     ├── lsp/       # Tests for LSP diagnostics
     ├── others/    # Tests for others
     ├── sort/      # Tests for sorting

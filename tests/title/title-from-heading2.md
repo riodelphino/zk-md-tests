@@ -1,5 +1,10 @@
+---
+id: title-from-heading2
+aliases: []
+tags: []
+---
 
-## Title from heading2
+## Title from Heading2
 
 This is the content.
 This is the content.

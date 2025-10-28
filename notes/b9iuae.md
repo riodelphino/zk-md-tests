@@ -1,6 +1,6 @@
 ---
 id         : b9iuae
-title      : Second note in notes dir
+title      : 2 Second note in notes dir
 slug       : 
 created    : 2025-10-02 00:00:00
 modified   : 2025-10-02 00:00:00
@@ -9,6 +9,6 @@ tags       : []
 status     : draft
 ---
 
-# Second note in notes dir
+# 2 Second note in notes dir
 
 

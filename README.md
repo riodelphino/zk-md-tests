@@ -17,11 +17,11 @@ A collection of test cases for zk and Markdown files and directory structures.
     ├── git/       # Tests for git
     ├── hidden/    # Tests for hidden items
     ├── lsp/       # Tests for LSP diagnostics
+    ├── metadata/  # Tests for metadata (YAML frontmatter)
     ├── others/    # Tests for others
     ├── sort/      # Tests for sorting
     ├── tag/       # Tests for tags
-    ├── title/     # Tests for title
-    └── yaml/      # Tests for YAML frontmatter
+    └── title/     # Tests for title
 ```
 
 ## Related

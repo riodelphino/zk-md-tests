@@ -1,2 +1,0 @@
-# Title from Heading1
-

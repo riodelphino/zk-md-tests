@@ -12,13 +12,5 @@ status     : {{extra.status}}
 # {{title}}
 
 
-<!-- mtoc start -->
-<!-- mtoc end -->
-
 {{content}}
-
-
-## Related
-
-- 
 

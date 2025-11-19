@@ -135,8 +135,8 @@ tags = ""
 [group."anywhere"]
 
 [group."anywhere".note]
-filename = "{{format-date now '%Y%m%d-%H%M%S'}}"
-template = "anywhere.md"
+# filename = "{{title}}"
+# template = "anywhere.md"
 
 [group."anywhere".extra]
 created = "{{format-date now '%Y-%m-%d %H:%M:%S'}}"

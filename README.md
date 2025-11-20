@@ -16,6 +16,7 @@ A collection of test cases for zk and Markdown files and directory structures.
     ├── filter/    # Tests for filtering
     ├── git/       # Tests for git
     ├── hidden/    # Tests for hidden items
+    ├── image/     # Tests for image files
     ├── lsp/       # Tests for LSP diagnostics
     ├── metadata/  # Tests for metadata (YAML frontmatter)
     ├── others/    # Tests for others

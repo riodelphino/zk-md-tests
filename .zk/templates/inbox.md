@@ -1,7 +1,7 @@
 ---
 title      : {{title}}
 categories : [{{extra.categories}}]
-tags       : [{{extra.tags}}]
+tags       : [inbox{{#if extra.tags}}, {{extra.tags}}{{/if}}]
 ---
 
 # {{title}}

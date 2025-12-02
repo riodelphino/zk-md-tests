@@ -1,3 +1,5 @@
+-- Per-project config for 'img-clip.nvim'
+
 return {
   defaults = {
     dir_path = 'assets',
@@ -15,12 +17,16 @@ return {
   },
 }
 
+-- TODO: Use 'assets/{id}' dir to store images
+-- (e.g.)
+--    'assets/a9ikue'
+
 -- TODO: Resize when large image
--- Sample config:
+-- (e.g.)
 --    process_cmd = "convert - -quality 85 -" -- compress the image with 85% quality
 --    process_cmd = "convert - -resize 50% -" -- resize the image to 50% of its original size
 
--- NOTE: A TEST for renaming (Effective only in template. The real filename is formatted by 'file_name' option)
+-- NOTE: A TEST for renaming (Valid only in 'template'. Actual filename is formatted with 'file_name' option)
 -- template = function(context)
 --   local function encode(path)
 --     -- return path:gsub('([^A-Za-z0-9._~-])', function(c) -- Encode all special chars

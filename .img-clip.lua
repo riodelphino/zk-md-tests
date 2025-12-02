@@ -2,24 +2,24 @@
 
 return {
   defaults = {
-    dir_path = 'assets',
+    dir_path = 'assets', -- Save to `assets` dir
     formats = { 'jpeg', 'jpg', 'png' },
   },
   filetypes = {
     markdown = {
       template = '![$FILE_NAME_NO_EXT]($FILE_PATH)',
-      file_name = '%Y%m%d-%H%M%S',
-      download_images = true, -- download images from url
-      copy_images = true,     -- copy local images to assets dir
-      -- use_absolute_path = false,
-      -- relative_to_current_file = false,
+      file_name = function()
+        local md_path = vim.api.nvim_buf_get_name(0)
+        local md_basename = vim.fn.fnamemodify(md_path, ':t:r')
+        return vim.fs.joinpath(md_basename, '%Y%m%d-%H%M%S') -- md_basename + datetime (e.g. `b9iuae/20251101-122015.jpg`)
+      end,
+      download_images = true,                                -- download images from url
+      copy_images = true,                                    -- copy local images to assets dir
+      relative_to_current_file = false,
+      relative_template_path = false,                        -- Use relative to cwd, not to current file
     },
   },
 }
-
--- TODO: Use 'assets/{id}' dir to store images
--- (e.g.)
---    'assets/a9ikue'
 
 -- TODO: Resize when large image
 -- (e.g.)

@@ -25,6 +25,17 @@ A collection of test cases for zk and Markdown files and directory structures.
     └── title/     # Tests for title
 ```
 
+## Dependencies
+
+Requires:
+   - [zk-org/zk](https://github.com/zk-org/zk)
+   - [zk-org/zk-nvim](https://github.com/zk-org/zk-nvim)
+
+Optional:
+   - [img-clip.nvim](https://github.com/HakonHarnes/img-clip.nvim) for inserting images test
+   - [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim) for better visibility
+
+
 ## Related
 
 - [zk-org/zk](https://github.com/zk-org/zk)

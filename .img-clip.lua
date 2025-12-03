@@ -3,28 +3,31 @@
 return {
   defaults = {
     dir_path = 'assets', -- Save to `assets` dir
-    formats = { 'jpeg', 'jpg', 'png' },
   },
-  filetypes = {
-    markdown = {
+  dirs = {
+    [''] = {
+      formats = { 'jpeg', 'jpg', 'png', 'webp', 'avif', 'pdf' },
       template = '![$FILE_NAME_NO_EXT]($FILE_PATH)',
-      file_name = function()
+      dir_path = function() -- Save to `assets/{zk_id}` dir (e.g. `assets/b9iuae`)
         local md_path = vim.api.nvim_buf_get_name(0)
         local md_basename = vim.fn.fnamemodify(md_path, ':t:r')
-        return vim.fs.joinpath(md_basename, '%Y%m%d-%H%M%S') -- md_basename + datetime (e.g. `b9iuae/20251101-122015.jpg`)
+        return vim.fs.joinpath('assets', md_basename)
       end,
-      download_images = true,                                -- download images from url
-      copy_images = true,                                    -- copy local images to assets dir
+      file_name = '%Y%m%d-%H%M%S',    -- datetime (e.g. `20251101-122015.jpg`)
+      download_images = true,         -- download images from url
+      copy_images = true,             -- copy local images to assets dir
       relative_to_current_file = false,
-      relative_template_path = false,                        -- Use relative to cwd, not to current file
+      relative_template_path = false, -- Use relative to cwd, not to current file
+      -- process_cmd = 'convert - -resize 800x800\\> -quality 90 -', -- Resize to within 800x800
+
+      -- process_cmd = function(arg) -- NOT WORKS
+      --   print('arg: ' .. vim.inspect(arg))
+      -- end,
+
+      -- NOTE: `filetype` option insists `markdown` `vimwiki` `typst` e.t.c. / NOT `jpg` `png` `pdf`
     },
   },
 }
-
--- TODO: Resize when large image
--- (e.g.)
---    process_cmd = "convert - -quality 85 -" -- compress the image with 85% quality
---    process_cmd = "convert - -resize 50% -" -- resize the image to 50% of its original size
 
 -- NOTE: A TEST for renaming (Valid only in 'template'. Actual filename is formatted with 'file_name' option)
 -- template = function(context)
